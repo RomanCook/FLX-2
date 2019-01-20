@@ -1,0 +1,149 @@
+@media print {
+section.heading,
+section.blocks,
+section#ideas,
+section.tm-content-box,
+.tm-main-nav,
+#about {
+	display: none;
+}
+p:first-letter {
+	color:#1E90FF;
+	font-size: 30px;
+}
+p.tm-section-description {
+	text-indent: 20px;
+}
+h2.tm-section-title {color: blue;
+}
+.tm-content-box {
+	margin-bottom: 0px;
+}
+.padding-medium {
+	padding: 50px; 
+}
+.flex-2-col {
+	display: flex;
+}
+.flex-item {
+	padding-top: 0px;
+	width: 50%;
+}
+.tm-main-content{
+	padding-top: 0px;
+}
+.tm-content-header {
+	padding: 0px;
+}
+img {
+	width: 80%;
+}
+section:before{
+	display: none;
+}
+}
+@media screen {
+.tm-banner{
+	border:30px solid #f5f5f5;
+}
+.tm-banner-inner {
+	margin:-30px;
+}
+.flex-2-col {
+	display: flex;
+	}
+h2+p {
+	font-style: italic;
+}
+h2.tm-section-title-box:hover{
+    color: #fff; background-color: lightskyblue;
+}
+p.tm-banner-text:first-letter,
+p.tm-section-description:first-letter {
+	color:#87CEFA;
+	font-size: 30px;
+}
+section:before{
+	content:"";
+	border-top:30px solid lightskyblue;
+	border-right:250px solid transparent;
+}
+section,
+.tm-sidebar,
+#home {
+box-shadow: 0px 0px 2px 2px rgba(102,102,102,0.5);
+}
+.tm-banner {
+	background: inherit;
+}
+.tm-team-description-container {
+	padding-top: 150px;
+}
+p.tm-section-description {
+	text-indent: 20px;
+}
+.tm-section-description {
+	line-height:2em;
+}
+.carousel-inner h2 {
+	color: gainsboro;
+	letter-spacing: 5px;
+}
+section.tm-content-box a:visited {
+	text-decoration: underline;
+}
+section.tm-content-box a:hover {
+	color: lightskyblue;
+	text-decoration-style: double;
+}
+.text:after {
+	content: "New";
+	color: red;
+	vertical-align: super;
+	font-size: 10pt;
+}
+li.box-work {
+	padding: 10px;
+	box-shadow: none;
+}
+li.box-work p {
+	font-style: italic;
+	color: #666;
+}
+li.box-work p:first-letter {
+	font-size: 30px;
+}
+li.box-work:nth-child(2n) {
+	background-color: #f5f5f5;
+}
+.flex-item {
+	box-shadow: none;
+}
+.form-group-2-col-right:after {
+	content:"*";
+	color:red;
+}
+.btn {
+	color: lightskyblue;
+	font-size: 14pt;
+	float:right;
+	width: 160px;
+	height: 60px;
+	border-color: lightskyblue;
+	background-color: #ffffff;
+	border-radius: 0px;
+}
+.btn:hover {
+	color: #ffffff;
+	font-size: 14pt;
+	float:right;
+	width: 160px;
+	height: 60px;
+	border-color: #1E90FF;
+	background-color: lightskyblue;
+	border-radius: 0px;
+}
+li.tm-nav-item:hover {
+	background-color: #f5f5f5;
+}
+}
