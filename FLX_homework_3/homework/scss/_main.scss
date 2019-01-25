@@ -1,0 +1,206 @@
+@mixin textButton($paddLeft,$paddRight,$paddTop,$paddBot,$fontSz) {
+			text-transform: uppercase;
+			text-decoration: none;
+			padding-right: $paddRight;
+			padding-left: $paddLeft;
+			padding-top: $paddTop;
+			padding-bottom: $paddBot;
+			font-size: $fontSz;
+			border: none;
+}
+@mixin button {
+			display: inline-block;
+			background: $buttonBg;
+			@include textButton($paddLeft: 70px,$paddRight: 70px,$paddTop: 8px,$paddBot: 8px,$fontSz: 10px);
+			padding-bottom: 10px;
+			font: $buttonFont;
+			color: $buttonColor;
+			margin-top: 20px;	
+			float: right;
+}
+@mixin inputForm {
+			border: 1px solid $borderColor;
+			background: $mainBg;
+}
+body {
+	background: $mainBg;
+	margin: 0;
+	padding: 0;
+	font: $mainFont;
+	color: $mainColor;
+}
+header {
+	color: $headerColor;
+	font: $mainFont;
+	background: $headerBg;
+	height: 100vh;
+	.logo {
+		display: inline-block;
+	}
+	img {
+		width: 35%;
+	}
+	nav {
+		padding-top: 0px;
+		float: right;
+		a {
+			display: inline-block;
+			height: 20px;
+			font: $mainFont;
+			font-weight: bold;
+			color: $headerColor;
+			@include textButton($paddLeft: 100px,$paddRight: 100px,$paddTop: 20px,$paddBot: 20px,$fontSz: 14px);
+			&:first-child {
+			border-right: 2px solid $borderColor;
+			}
+			&:last-child {
+			border-left: 2px solid $borderColor;
+		}
+		}
+		}
+	section {
+	padding-top: 15%;
+	text-align: center;
+	h1 {
+		text-align: center;
+	}
+	a {
+	&.btn-top {
+		display: inline-block;
+		background: $buttonBg;
+		@include textButton($paddLeft: 60px,$paddRight: 60px,$paddTop: 10px,$paddBot: 10px,$fontSz: 10px);
+		padding-bottom: 10px;
+		font: $mainFont;
+		color: $buttonColor;
+		margin-top: 20px;
+		font-size: 12px;
+		}
+	}
+}
+}
+main {
+	padding-top: 20px;
+	display: flex;
+	flex-direction: column;
+	padding-left: 17%;
+	width: 66%;
+	text-align: center;
+	background: $mainBg;
+	.toolbar {
+		display: block;
+		float: right;
+		input {
+			float: right;
+			height:24px;
+			padding:6px 20px;
+			@include inputForm;
+			}
+		}
+	}
+section {
+	h1 {
+		text-transform: uppercase;
+		padding: 0px;
+		margin-bottom: 2px;
+		text-align: right;
+		}
+	&.about {
+		text-align: left;
+		padding: 0px 20px 0px 20px;
+		img {
+			width: 100%;
+		}
+		}
+	&.contact-form {
+		h1 {
+			padding-top: 20px;
+		}
+	}
+	p {
+		margin: 0px 0px 10px 0px;
+		}
+	h4 {
+		padding: 0px;
+		margin: 2px 0px 2px 0px;
+		text-align: right;
+		text-transform: uppercase;
+	}
+	#about {
+		img {
+			width: 100%;
+		}
+	}
+}
+article {
+		font: $mainFont;
+		background: $articleBg;
+		display: flex;
+		text-align: left;
+		padding: 10px;
+		margin-bottom: 20px;
+		img {
+			width: 30%;
+			height: 30%;
+			float: left;
+			}
+			button {
+			@include button;
+			}
+		}
+
+.post {
+	padding-left: 10px;
+	h3 {
+		color: $artTitleColor;
+		text-transform: uppercase;
+		margin: 2px 0px;
+		}
+	p {
+		margin: 2px 0px;
+	}
+	}
+.post-description {
+		color: $artDescrColor;
+		font-size: 10px;
+		border-bottom: 1px solid $borderColor;
+	}
+form {
+	.container {
+		display:flex;
+		padding: 20px 0px 0px 0px;
+		.block {
+			text-align: right;
+			width:100%;
+			color: $artTitleColor;
+			font: $mainFont;
+			font-size: 14px;
+			label {
+			display: block;
+			width: 100%;
+			}
+			&:nth-child(2) {
+				margin-left: 10px;
+			}
+			.btn {
+				@include button;
+				margin-top: 0px;
+			}
+		input {
+				display: block;
+				width:100%;
+				height: 40px;
+				@include inputForm;
+			}
+		textarea {
+			width: 100%;
+			@include inputForm;
+			}
+		}
+		}
+}
+footer {
+	padding: 0px 20px 20px 20px;
+	font-size: 12px;
+
+}
+::-webkit-input-placeholder {color:$mainColor;}
