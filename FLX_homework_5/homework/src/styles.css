@@ -1,0 +1,273 @@
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: roboto;
+  font-weight:100;
+  color: #ffffff;
+  background: #0b192f;
+}
+div {
+  padding: 0;
+}
+.top-wrapper {
+  width: 80%;
+  margin: 0 10%;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  background: #162b4d;
+  margin-bottom: 2%;
+  padding: 0 2%;
+  align-items: center;
+}
+.hamburger {
+  display: none;
+}
+.title h1 {
+  font-size: 28px;
+  font-weight: 100;
+}
+.title h1 span {
+  color: #d12767;
+}
+.header-nav {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  background: inherit;
+}
+.nav-itm a{
+  display: inline-block;
+  align-items: center;
+  padding: 2em 1em;
+  color: #ffffff;
+  text-decoration: none;
+  }
+.nav-itm:hover {
+  display: inline-block;
+  background: rgba(184,185,184,0.3);
+  color: #ffffff;
+}
+main, footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.blog, .aside {
+  display: flex;
+  flex-direction: column;
+}
+.aside {
+  max-width: 20%;
+}
+.blog {
+  margin-right: 2%;
+}
+.post {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  width: 100%;
+}
+.post-img:hover, .post-descr:hover, .post-descr5:hover {
+  cursor: pointer;
+  filter: opacity(70%);
+}
+.post-descr, .post-date {
+  box-sizing: border-box;
+  margin-bottom: 0px;
+  min-height:100%;
+}
+.post:nth-child(even) {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+.post:nth-child(1) {
+  background: #B71757;
+}
+.post:nth-child(2) {
+  background: #0D7E71;
+}
+.post:nth-child(3) {
+  background: #b1660e;
+}
+.post:nth-child(4) {
+  background: #d12767;
+}
+.post:nth-child(5) {
+  background: #2d95bb;
+}
+.post-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.post-img {
+  width: 50%;
+  box-sizing: border-box;
+}
+.post-descr {
+  width: 40%;
+  box-sizing: border-box;
+ }
+.post-date {
+  width: 10%;
+  box-sizing: border-box;
+}
+.post-descr5 {
+  width: 90%;
+}
+.post-descr p, .post-descr5 p {
+  font-size: 14px;
+  filter: opacity(60%);
+  padding: 10px 30px 20px 30px;
+}
+.post-descr h2, .post-descr5 h2 {
+  font-weight: 100;
+  filter: none;
+  font-size: 50px;
+  line-height: 1;
+  padding: 0;
+  margin: 40px 30px 0px 30px;
+}
+.post-date p {
+  text-align: center;
+  margin: 10px 10px 10px 10px;
+  padding: 0px;
+  font-size:30px;
+  filter: opacity(60%);
+}
+.post-date p span {
+  font-size: 60px;
+}
+.news {
+  display: flex;
+  flex-direction: column;
+  color: #000000;
+  font-size: 14px;
+  background: #ffffff;
+  margin-bottom: 20px;
+}
+.news img {
+  width: 100%;
+}
+.news-text p {
+  margin: 0 20px 20px 20px;
+  filter: opacity(70%);
+  line-height: 1.5;
+}
+.news-text h2 {
+  margin: 20px 20px 10px 20px;
+  font-weight: 300;
+  font-size: 24px;
+}
+
+footer {
+  background: #162b4d;
+  margin: 20px 0 5px 0;
+  padding: 20px;
+  filter: opacity(60%);
+}
+@media screen and (max-width: 768px), screen and (max-width: 480px) {
+  .top-wrapper {
+  width: 98%;
+  margin: 0 1%;
+}
+.aside {
+  max-width: 40%;
+}
+header {
+  flex-direction: column;
+}
+.hamburger {
+  display: inline;
+  width: 16px;
+  margin: 20px 0px;
+  filter: opacity(60%);
+}
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin-bottom: 5px;
+  background: #ffffff;
+  cursor: pointer;
+}
+.title {
+  margin-bottom: 20px;
+}
+.header-nav {
+  display: none;
+}
+.post {
+    flex-direction: column;
+  }
+.post-img, .post-descr, .post-date {
+  width: 100%;
+  box-sizing: border-box;
+}
+.news-text h2 {
+  font-size: 24px;
+}
+.post-descr h2, .post-descr5 h2 {
+  font-size: 36px;
+}
+.post-date p {
+  font-size:24px;
+}
+.post-date p span {
+  font-size: 30px;
+}
+.post:nth-child(even) {
+  flex-direction: column;
+}
+footer {
+  flex-direction: column;
+  flex-basis: 100%;
+  align-items: center;
+  padding-bottom: 0;
+}
+.copy, .author {
+  text-align: center;
+}
+}
+@media screen and (max-width: 480px) {
+  .top-wrapper {
+  width: 96%;
+  margin: 0 2%;
+}
+main {
+  flex-direction: column;
+  flex-basis: 100%;
+  width: 100%;
+}
+.title h1 {
+  font-size: 30px;
+  font-weight: 100;
+}
+
+.blog {
+  margin: 0;
+}
+.aside {
+  max-width: 100%;
+}
+.news-text h2 {
+  font-size: 20px;
+}
+.post-descr h2, .post-descr5 h2 {
+  font-size: 28px;
+}
+.post-date p {
+  font-size:16px;
+}
+.post-date p span {
+  font-size: 26px;
+}
+footer {
+  margin-bottom: 10px;
+}
+}
