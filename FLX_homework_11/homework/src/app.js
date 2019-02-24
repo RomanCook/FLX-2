@@ -7,7 +7,8 @@ let maxList = 10;
 let one = 1;
 
 function checkInput () {
-	inputValue.addEventListener('input', empty=> {
+	addButton.setAttribute('disabled', true);
+	inputValue.addEventListener('input', empty => {
 		if (inputValue.value !== '') {
 			addButton.disabled = false;
 		} else {
@@ -77,7 +78,6 @@ function delItem (parent) {
 	} else {
 		addButton.disabled = true;
 		inputValue.disabled = true;
-		message.classList.remove('showNone');
 	}
 }
 
@@ -90,11 +90,11 @@ function allowDrop(ev) {
 }
 
 function dragStar(ev) {
-  ev.dataTransfer.setData("text", ev.target.id);
+  ev.dataTransfer.setData('text', ev.target.id);
 }
 
 function dragOver(ev) {
   ev.preventDefault();
-  let data = ev.dataTransfer.getData("text");
+  let data = ev.dataTransfer.getData('text');
   ev.target.appendChild(document.getElementById(data));
 }
