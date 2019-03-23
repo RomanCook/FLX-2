@@ -32,7 +32,7 @@ function Company (name, owner, maxCount) {
 			companyHistoryLog+= `${employeeName.name} starts working at ${this.name} in ${employeeName.startDate}.\n`;
 			}
 		} else {
-			return `Please try to add Employee instance`
+			return console.log(`Please try to add Employee instance`);
 			}
 		}
 	this.removeEmployee = function (id) {
@@ -42,7 +42,7 @@ function Company (name, owner, maxCount) {
 		companyHistoryLog+= `${firedEmployee.name} ends working at ${this.name} in ${getDate()}\n`;
 		let removed = _employeeList.splice(id, uno);
 		} else {
-			return `Please try to add id of employee.`
+			return console.log(`Please try to add id of employee.`);
 		}
 	}
 	this.getAvarageSalary = function () {
@@ -51,7 +51,7 @@ function Company (name, owner, maxCount) {
 			totalSalary+=el.salary;
 		})
 		let avarageSalary = totalSalary / _employeeList.length;
-		return Math.round(avarageSalary*sotka)/sotka;
+		return console.log(`${Math.round(avarageSalary*sotka)/sotka}`);
 	}
 	this.getAvarageAge = function () {
 		let totalAge = 0;
@@ -59,7 +59,7 @@ function Company (name, owner, maxCount) {
 			totalAge+=el.age;
 		})
 		let avarageAge = totalAge / _employeeList.length;
-		return Math.round(avarageAge*sotka)/sotka;
+		return console.log(`${Math.round(avarageAge*sotka)/sotka}`);
 	}
 	this.getEmployees = function () {
 		let employeeNameList = [];
@@ -74,10 +74,10 @@ function Company (name, owner, maxCount) {
 		this.employeeList.forEach((el) => {
 			formattedList+= `${el.name} works in ${this.name} ${el.getWorkTimeInSeconds()} seconds.\n`;
 		});
-		return formattedList;
+		return console.log(`${formattedList}`);
 	}
 	this.getHistory = function () {
-		return companyHistoryLog;
+		return console.log(`${companyHistoryLog}`);
 	}
 }
 function Employee (name, age, salary, primarySkill) {
@@ -89,9 +89,9 @@ function Employee (name, age, salary, primarySkill) {
 	this.getWorkTimeInSeconds = function () {
 		let thousand = 1000;
 		if(this.startDate) {
-			return Math.floor((getDate().getTime() - this.startDate.getTime())/thousand);
+			return console.log(`${Math.floor((getDate().getTime() - this.startDate.getTime())/thousand)}`);
 		} else {
-			return `${this.name} is not working.`
+			return console.log(`${this.name} is not working.`);
 		}
 	}
 	function getDate () {
@@ -108,10 +108,10 @@ function Employee (name, age, salary, primarySkill) {
 		delete this.startDate;
 	}
 	this.getHistory = function () {
-		return employeeHistoryLog;
+		return console.log(`${employeeHistoryLog}`);
 	}
 	this.getSalary = function () {
-		return this.salary;
+		return console.log(`${this.salary}`);
 	}
 	this.setSalary = function (newSalary) {
 		if (newSalary>this.salary && !isNaN(newSalary)) {
@@ -119,9 +119,9 @@ function Employee (name, age, salary, primarySkill) {
 			this.salary = newSalary;
 		} else if (newSalary<this.salary && !isNaN(newSalary)) {
 			employeeHistoryLog += `try to change salary from ${this.salary} to ${newSalary}.\n`;
-			return `You cant change the salary to lower salary.`
+			return console.log(`You cant change the salary to lower salary.`)
 		} else {
-			return `You cant change the salary.`
+			return console.log(`You cant change the salary.`)
 		}
 	}
 }
