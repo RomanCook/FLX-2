@@ -1,16 +1,18 @@
 class User {
-    constructor() {
-        this.orderTotalPrice = 3500;
-        this.weekendDiscount = 10;
-        this.nightDiscount = 10;
-        this.bonus = 0;
+    constructor(
+        orderTotalPrice,
+        weekendDiscount,
+        nightDiscount,
+        bonus) {
+        this.orderTotalPrice = orderTotalPrice || 3500;
+        this.weekendDiscount = weekendDiscount || 10;
+        this.nightDiscount = nightDiscount || 10;
+        this.bonus = bonus || null;
     }
     makeOrder() {
         return `Price after discount and including bonuses is ${this.orderTotalPrice}.`
     }
 }
-
-const user = new User();
 
 const setBonus = user => {
     let bonusCounter = parseInt(user.orderTotalPrice / 100);
@@ -19,7 +21,7 @@ const setBonus = user => {
 }
 
 const getDiscount = user => {
-    let date = new Date("April 21, 2019 03:24:00");
+    let date = new Date();
     let hours = date.getHours();
     let days = date.getDay();
     if (hours < 6 || hours > 23) {
@@ -29,6 +31,8 @@ const getDiscount = user => {
         user.orderTotalPrice -= user.weekendDiscount;
     };
 }
+
+const user = new User(1000);
 
 getDiscount(user);
 setBonus(user);
